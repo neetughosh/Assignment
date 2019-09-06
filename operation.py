@@ -42,10 +42,10 @@ def minimum(array):
     """    
     Purpose : This function returns the minimum element in an array
     
-    Input : 
+    Input   : 
         array  : The array from which the smallest element has to be returned
         
-    Output : Smallest element in an array
+    Output  : Smallest element in an array
     
     """   
     
