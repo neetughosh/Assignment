@@ -4,26 +4,31 @@ Created on Fri Sep 2019
 
 @author: Neetu Ghosh
 """
+
 """
-Finds the minimum number from an array
+
+Given an array of elements that provide a less than operator, Find the minimum using as few comparisons as possible.
+The array shall be given such that the first few elements are monotonically decreasing and remaining elements are strictly monotonically increasing.
+
 """
         
 def binary_search(arr, low, high):
-    """
-    
-    Purpose : This function divide the array into smallest possible size required for comparison and returs the smallest element
+    """    
+    Purpose : This function find the smallest element using Binary search
     
     Input : 
         arr  : The array from which the smallest element has to be returned
         low  : Starting index of the array
         high : End index of the array  
         
-    Output : Smallest element
-    
+    Output : Smallest element in the array 
     """ 
-    if (low > high):
-        raise IndexError('list is empty')
     
+    # Check for empty array
+    if (low > high):
+        raise IndexError('Array is empty')
+    
+    # Finds the smallest element
     while(low < high):
         mid = (low + (high-low)//2)
         
@@ -31,20 +36,16 @@ def binary_search(arr, low, high):
             high = mid
         else:
             low = mid + 1
-    print (low)
-    return arr[low]    
-              
-        
+    return arr[low]        
         
 def minimum(array):
-    """
-    
+    """    
     Purpose : This function returns the minimum element in an array
     
     Input : 
         array  : The array from which the smallest element has to be returned
         
-    Output : Smallest element
+    Output : Smallest element in an array
     
     """   
     
